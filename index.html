@@ -1,27 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/32e5e73d4b.js" crossorigin="anonymous"></script>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Naughts and Crosses</title>
 </head>
+
 <body>
-    <div id="mainConatainer">
-        <div id="gameBoard" >
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box">4</div>
-            <div class="box">5</div>
-            <div class="box">6</div>
-            <div class="box">7</div>
-            <div class="box">8</div>
-            <div class="box">9</div>
-           
+  <main>
+    <h1>Naughts and Crosses!</h1>
+    <div>
+      <form id="player-form" onsubmit="return false">
+        <p>Select difficulty:</p>
+        <div>
+          <input type="radio" id="easy" name="difficulty" value="easy" checked>
+          <label for="easy">Easy</label>
+          <input type="radio" id="medium" name="difficulty" value="medium">
+          <label for="medium">Medium</label>
+          <input type="radio" id="hard" name="difficulty" value="hard">
+          <label for="hard">Hard</label>
         </div>
+        <button id="start-game" type="submit" value="submit" onclick="docControl.setup()">Game on!</button>
+      </form>
     </div>
-    <script src="/server.js"></script>
+    <div id="board" class="board">
+      <div id="winner-text"></div>
+      <div id="square-1" class="square"></div>
+      <div id="square-2" class="square"></div>
+      <div id="square-3" class="square"></div>
+      <div id="square-4" class="square"></div>
+      <div id="square-5" class="square"></div>
+      <div id="square-6" class="square"></div>
+      <div id="square-7" class="square"></div>
+      <div id="square-8" class="square"></div>
+      <div id="square-9" class="square"></div>
+    </div>
+  </main>
 </body>
+
+<script src="/server.js"></script>
+
 </html>
